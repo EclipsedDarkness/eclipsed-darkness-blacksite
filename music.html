@@ -78,6 +78,8 @@
 
     .featured-songs {
       margin-top: 80px;
+      padding-left: 0;
+      padding-right: 0;
     }
 
     @media (max-width: 900px) {
@@ -116,27 +118,13 @@
   <main class="music-main">
     <section class="album-panel">
       <div class="album-cover-box">
-        <img
-          src="front_cover.jpg"
-          alt="Ascension of the Digital Gods album cover"
-          onerror="
-            if (this.dataset.try1 !== 'done') {
-              this.dataset.try1 = 'done';
-              this.src = 'front_cover.png';
-            } else if (this.dataset.try2 !== 'done') {
-              this.dataset.try2 = 'done';
-              this.src = 'front-cover.jpg';
-            } else if (this.dataset.try3 !== 'done') {
-              this.dataset.try3 = 'done';
-              this.src = 'front-cover.png';
-            }
-          "
-        />
+        <img src="front_cover.png" alt="Ascension of the Digital Gods album cover" />
       </div>
 
       <div class="album-details">
         <p class="eyebrow">Featured Album</p>
         <h2>Ascension of the Digital Gods</h2>
+
         <p>
           A cyber-industrial metal descent into machine worship, corrupted signals,
           collapsing cities, artificial gods, and the last human resistance beneath neon skies.
