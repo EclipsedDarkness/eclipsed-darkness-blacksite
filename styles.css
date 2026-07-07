@@ -316,3 +316,143 @@ footer {
     font-size: 0.8rem;
   }
 }
+.album-layout {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.album-cover img,
+.track-art img {
+  width: 100%;
+  display: block;
+  border: 1px solid rgba(0, 255, 136, 0.25);
+  box-shadow:
+    0 0 25px rgba(0, 0, 0, 0.8),
+    0 0 35px rgba(0, 255, 136, 0.18);
+}
+
+.album-info h2 {
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: 1;
+  margin-bottom: 22px;
+}
+
+.track-art {
+  max-width: 650px;
+  margin: 30px 0 35px;
+}
+
+.track-list {
+  max-width: 850px;
+  display: grid;
+  gap: 12px;
+}
+
+.track {
+  padding: 14px 18px;
+  background: rgba(8, 8, 8, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #f2f2f2;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.track span {
+  color: #00ff88;
+  margin-right: 14px;
+}
+
+@media (max-width: 900px) {
+  .album-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .album-cover {
+    max-width: 520px;
+  }
+.album-layout {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.album-cover img,
+.track-art img {
+  width: 100%;
+  display: block;
+  border: 1px solid rgba(0, 255, 136, 0.25);
+  box-shadow:
+    0 0 25px rgba(0, 0, 0, 0.8),
+    0 0 35px rgba(0, 255, 136, 0.18);
+}
+
+.album-info h2 {
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: 1;
+  margin-bottom: 22px;
+}
+
+.track-art {
+  max-width: 650px;
+  margin: 30px 0 35px;
+}
+
+.track-list {
+  max-width: 850px;
+  display: grid;
+  gap: 12px;
+}
+
+.track {
+  padding: 14px 18px;
+  background: rgba(8, 8, 8, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #f2f2f2;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.track span {
+  color: #00ff88;
+  margin-right: 14px;
+}
+
+@media (max-width: 900px) {
+  .album-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .album-cover {
+    max-width: 520px;
+  }
+.album-layout {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.album-cover img,
+.track-art img {
+  width: 100%;
+  display: block;
+  border: 1px solid rgba(0, 255, 136, 0.25);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+}
+
+.album-info h2 {
+  font-size: clamp(2.4rem, 5vw, 4.5rem);
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: 1;
+  margin-bottom: 22px;
+}
