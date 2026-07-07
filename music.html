@@ -5,7 +5,93 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Music | Eclipsed Darkness</title>
   <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    .music-main {
+      padding: 80px 6%;
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    .album-panel {
+      display: grid;
+      grid-template-columns: 420px 1fr;
+      gap: 45px;
+      align-items: start;
+      background:
+        linear-gradient(135deg, rgba(0, 255, 136, 0.08), rgba(180, 0, 0, 0.1)),
+        #080808;
+      border: 1px solid rgba(0, 255, 136, 0.2);
+      padding: 32px;
+      box-shadow: 0 0 35px rgba(0, 0, 0, 0.8);
+    }
+
+    .album-cover-box img {
+      width: 100%;
+      max-width: 420px;
+      display: block;
+      border: 1px solid rgba(0, 255, 136, 0.35);
+      box-shadow:
+        0 0 30px rgba(0, 0, 0, 0.9),
+        0 0 25px rgba(0, 255, 136, 0.22);
+    }
+
+    .album-details h2 {
+      font-size: clamp(2rem, 5vw, 4rem);
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      margin-bottom: 18px;
+    }
+
+    .album-details p {
+      max-width: 700px;
+      color: #d3d3d3;
+      font-size: 1.1rem;
+      margin-bottom: 24px;
+    }
+
+    .track-list-clean {
+      margin-top: 30px;
+      max-width: 760px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .track-row {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 14px;
+      align-items: center;
+      padding: 10px 14px;
+      background: #050505;
+      border: 1px solid rgba(0, 255, 136, 0.18);
+      color: #ffffff;
+      font-weight: 900;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .track-row span {
+      color: #00ff88;
+    }
+
+    .featured-songs {
+      margin-top: 80px;
+    }
+
+    @media (max-width: 900px) {
+      .album-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .album-cover-box img {
+        max-width: 100%;
+      }
+    }
+  </style>
 </head>
+
 <body>
   <header class="page-header">
     <nav class="nav">
@@ -27,52 +113,60 @@
     </section>
   </header>
 
-  <main>
-    <section class="section">
-      <div class="music-album-box">
-        <div class="music-cover">
-          <img src="front_cover.png" alt="Ascension of the Digital Gods album cover">
+  <main class="music-main">
+    <section class="album-panel">
+      <div class="album-cover-box">
+        <img
+          src="front_cover.jpg"
+          alt="Ascension of the Digital Gods album cover"
+          onerror="
+            if (this.dataset.try1 !== 'done') {
+              this.dataset.try1 = 'done';
+              this.src = 'front_cover.png';
+            } else if (this.dataset.try2 !== 'done') {
+              this.dataset.try2 = 'done';
+              this.src = 'front-cover.jpg';
+            } else if (this.dataset.try3 !== 'done') {
+              this.dataset.try3 = 'done';
+              this.src = 'front-cover.png';
+            }
+          "
+        />
+      </div>
+
+      <div class="album-details">
+        <p class="eyebrow">Featured Album</p>
+        <h2>Ascension of the Digital Gods</h2>
+        <p>
+          A cyber-industrial metal descent into machine worship, corrupted signals,
+          collapsing cities, artificial gods, and the last human resistance beneath neon skies.
+        </p>
+
+        <div class="hero-buttons">
+          <a class="button" href="store.html">Visit Store</a>
+          <a class="button secondary" href="#featured">Featured Songs</a>
         </div>
 
-        <div class="music-info">
-          <p class="eyebrow">Featured Album</p>
-          <h2>Ascension of the Digital Gods</h2>
-          <p>
-            A cyber-industrial metal descent into machine worship, corrupted signals,
-            collapsing cities, artificial gods, and the last human resistance beneath neon skies.
-          </p>
-
-          <div class="hero-buttons">
-            <a class="button" href="#tracklist">View Track List</a>
-            <a class="button secondary" href="store.html">Visit Store</a>
-          </div>
+        <div class="track-list-clean">
+          <div class="track-row"><span>01</span> Awakening Protocol</div>
+          <div class="track-row"><span>02</span> Convergence</div>
+          <div class="track-row"><span>03</span> Coded Faith</div>
+          <div class="track-row"><span>04</span> Ascension</div>
+          <div class="track-row"><span>05</span> Digital Gods</div>
+          <div class="track-row"><span>06</span> System Collapse</div>
+          <div class="track-row"><span>07</span> Church of Circuits</div>
+          <div class="track-row"><span>08</span> Lost Signals</div>
+          <div class="track-row"><span>09</span> Reboot the Soul</div>
+          <div class="track-row"><span>10</span> Believe in Nothing</div>
+          <div class="track-row"><span>11</span> Serve the Machine</div>
+          <div class="track-row"><span>12</span> Ghost in the Machine</div>
+          <div class="track-row"><span>13</span> Hack the Heavens</div>
+          <div class="track-row"><span>14</span> Eternal Upgrade</div>
         </div>
       </div>
     </section>
 
-    <section id="tracklist" class="section dark">
-      <p class="eyebrow">Album Sequence</p>
-      <h2>Track List</h2>
-
-      <div class="music-track-list">
-        <div class="music-track"><span>01</span> Awakening Protocol</div>
-        <div class="music-track"><span>02</span> Convergence</div>
-        <div class="music-track"><span>03</span> Coded Faith</div>
-        <div class="music-track"><span>04</span> Ascension</div>
-        <div class="music-track"><span>05</span> Digital Gods</div>
-        <div class="music-track"><span>06</span> System Collapse</div>
-        <div class="music-track"><span>07</span> Church of Circuits</div>
-        <div class="music-track"><span>08</span> Lost Signals</div>
-        <div class="music-track"><span>09</span> Reboot the Soul</div>
-        <div class="music-track"><span>10</span> Believe in Nothing</div>
-        <div class="music-track"><span>11</span> Serve the Machine</div>
-        <div class="music-track"><span>12</span> Ghost in the Machine</div>
-        <div class="music-track"><span>13</span> Hack the Heavens</div>
-        <div class="music-track"><span>14</span> Eternal Upgrade</div>
-      </div>
-    </section>
-
-    <section class="section">
+    <section id="featured" class="featured-songs section">
       <p class="eyebrow">Featured Signals</p>
       <h2>Featured Songs</h2>
 
