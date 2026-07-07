@@ -26,14 +26,40 @@
       box-shadow: 0 0 35px rgba(0, 0, 0, 0.8);
     }
 
-    .album-cover-box img {
+    .fake-cover {
       width: 100%;
       max-width: 420px;
-      display: block;
+      min-height: 420px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 18px;
+      text-align: center;
+      padding: 32px;
+      background:
+        radial-gradient(circle at center, rgba(0, 255, 136, 0.22), transparent 45%),
+        linear-gradient(135deg, #050505, #1a0000 60%, #000000);
       border: 1px solid rgba(0, 255, 136, 0.35);
       box-shadow:
         0 0 30px rgba(0, 0, 0, 0.9),
         0 0 25px rgba(0, 255, 136, 0.22);
+    }
+
+    .fake-cover h3 {
+      color: #ffffff;
+      font-size: 2rem;
+      line-height: 1;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+
+    .fake-cover-small,
+    .fake-cover-tag {
+      color: #00ff88;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: 900;
     }
 
     .album-details h2 {
@@ -87,7 +113,7 @@
         grid-template-columns: 1fr;
       }
 
-      .album-cover-box img {
+      .fake-cover {
         max-width: 100%;
       }
     }
@@ -117,13 +143,13 @@
 
   <main class="music-main">
     <section class="album-panel">
-    <div class="album-cover-box no-cover">
-  <div class="fake-cover">
-    <p class="fake-cover-small">Eclipsed Darkness</p>
-    <h3>Ascension of the Digital Gods</h3>
-    <p class="fake-cover-tag">The signal is eternal.</p>
-  </div>
-</div>
+      <div class="album-cover-box no-cover">
+        <div class="fake-cover">
+          <p class="fake-cover-small">Eclipsed Darkness</p>
+          <h3>Ascension of the Digital Gods</h3>
+          <p class="fake-cover-tag">The signal is eternal.</p>
+        </div>
+      </div>
 
       <div class="album-details">
         <p class="eyebrow">Featured Album</p>
