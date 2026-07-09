@@ -384,8 +384,13 @@ footer {
 }
 
 .product-card audio {
-  width: 100%;
-  max-width: 100%;
-  margin-top: 14px;
   display: block;
+  width: 100%;
+  max-width: 260px;
+  margin: 14px auto 0 auto;
+  box-sizing: border-box;
+}
+
+.product-card {
+  overflow: hidden;
 }
