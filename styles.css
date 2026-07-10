@@ -77,9 +77,9 @@ img {
 /* HOMEPAGE HERO */
 
 .hero {
-  min-height: 620px;
-  height: 76vh;
-  max-height: 820px;
+  min-height: 500px;
+  height: 60vh;
+  max-height: 650px;
   background:
     linear-gradient(
       rgba(0, 0, 0, 0.12),
@@ -97,7 +97,7 @@ img {
 .hero-content {
   flex: 1;
   max-width: 850px;
-  padding: 70px 6% 90px;
+  padding: 45px 6% 65px;
   display: flex;
   flex-direction: column;
   justify-content: center;
