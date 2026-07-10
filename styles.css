@@ -25,9 +25,16 @@ a {
 .hero {
   min-height: 100vh;
   background:
-    linear-gradient(rgba(0, 0, 0, 0.25), rgba(5, 5, 5, 0.95)),
-    radial-gradient(circle at center, rgba(0, 255, 120, 0.18), transparent 35%),
-    linear-gradient(135deg, #050505, #111111 45%, #220000);
+    linear-gradient(
+      rgba(0, 0, 0, 0.35),
+      rgba(0, 0, 0, 0.65)
+    ),
+    url("hero-background.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   display: flex;
   flex-direction: column;
 }
