@@ -396,7 +396,7 @@ footer {
 }
 body {
   background:
-    linear-gradient(rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.88)),
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)),
     url("blacksite-background.png");
   background-size: cover;
   background-position: center;
