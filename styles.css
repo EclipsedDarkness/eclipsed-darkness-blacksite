@@ -467,3 +467,76 @@ main {
   background-position: center !important;
   background-repeat: no-repeat !important;
 }
+
+/* FINAL HEADER + BACKGROUND SETUP */
+
+/* Main background behind the whole site */
+body {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55)),
+    url("blacksite-background.png") !important;
+
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+}
+
+/* Home page top header */
+.hero {
+  min-height: 540px;
+  height: 64vh;
+  max-height: 700px;
+
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.10),
+      rgba(0, 0, 0, 0.70)
+    ),
+    url("hero-background.png") !important;
+
+  background-size: cover !important;
+  background-position: center 42% !important;
+  background-repeat: no-repeat !important;
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Music, Videos, Store page top headers */
+.page-header {
+  min-height: 360px;
+
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.10),
+      rgba(0, 0, 0, 0.70)
+    ),
+    url("hero-background.png") !important;
+
+  background-size: cover !important;
+  background-position: center 42% !important;
+  background-repeat: no-repeat !important;
+}
+
+/* Content below headers uses the blacksite background */
+main {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55)),
+    url("blacksite-background.png") !important;
+
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+}
+
+/* Let the blacksite background show through sections */
+.section {
+  background: rgba(0, 0, 0, 0.62) !important;
+}
+
+.section.dark {
+  background: rgba(0, 0, 0, 0.72) !important;
+}
