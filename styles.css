@@ -74,7 +74,7 @@ img {
   color: #00ff88;
 }
 
-/* HOMEPAGE HERO */
+/* HOmEPAGE HERO */
 
 .hero {
   min-height: 500px;
@@ -87,7 +87,7 @@ img {
     ),
     url("hero-background.png");
   background-size: cover;
-  background-position: center top;
+  background-position: center 28%;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
