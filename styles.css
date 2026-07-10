@@ -23,20 +23,40 @@ a {
 /* HEADER / HERO */
 
 .hero {
-  min-height: 100vh;
+  min-height: 560px;
+  height: 72vh;
+  max-height: 760px;
+
   background:
     linear-gradient(
-      rgba(0, 0, 0, 0.25),
-      rgba(0, 0, 0, 0.55)
+      rgba(0, 0, 0, 0.20),
+      rgba(0, 0, 0, 0.62)
     ),
     url("hero-background.png");
 
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   background-repeat: no-repeat;
 
   display: flex;
   flex-direction: column;
+}
+
+.hero-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 850px;
+  padding: 80px 6% 90px;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content h1,
+.hero-content .tagline {
+  text-shadow: 0 0 18px rgba(0, 0, 0, 0.95);
 }
 
 .page-header {
@@ -401,6 +421,7 @@ footer {
 .product-card {
   overflow: hidden;
 }
+
 body {
   background:
     linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)),
