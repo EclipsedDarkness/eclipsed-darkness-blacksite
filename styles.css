@@ -1,7 +1,7 @@
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -10,8 +10,14 @@ html {
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background: #050505;
-  color: #f2f2f2;
+  color: #ffffff;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.48), rgba(0, 0, 0, 0.62)),
+    url("blacksite-background.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   line-height: 1.6;
 }
 
@@ -20,54 +26,12 @@ a {
   text-decoration: none;
 }
 
-/* HEADER / HERO */
-
-.hero {
-  min-height: 560px;
-  height: 72vh;
-  max-height: 760px;
-
-  background:
-    linear-gradient(
-      rgba(0, 0, 0, 0.20),
-      rgba(0, 0, 0, 0.62)
-    ),
-    url("hero-background.png");
-
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
-
-  display: flex;
-  flex-direction: column;
+img {
+  max-width: 100%;
+  display: block;
 }
 
-.hero-content {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  max-width: 850px;
-  padding: 80px 6% 90px;
-  position: relative;
-  z-index: 2;
-}
-
-.hero-content h1,
-.hero-content .tagline {
-  text-shadow: 0 0 18px rgba(0, 0, 0, 0.95);
-}
-
-.page-header {
-  min-height: 55vh;
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.35), rgba(5, 5, 5, 0.95)),
-    radial-gradient(circle at center, rgba(170, 0, 0, 0.25), transparent 40%),
-    linear-gradient(135deg, #050505, #151515 45%, #260000);
-  display: flex;
-  flex-direction: column;
-}
+/* NAV */
 
 .nav {
   width: 100%;
@@ -77,15 +41,18 @@ a {
   align-items: center;
   gap: 24px;
   position: relative;
-  z-index: 2;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.55);
+  border-bottom: 1px solid rgba(0, 255, 136, 0.18);
+  backdrop-filter: blur(6px);
 }
 
 .logo {
-  font-size: 1.1rem;
-  font-weight: 800;
-  letter-spacing: 2px;
-  text-transform: uppercase;
   color: #ffffff;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1.1rem;
 }
 
 .nav-links {
@@ -96,319 +63,226 @@ a {
 }
 
 .nav-links a {
-  font-size: 0.9rem;
-  color: #d8d8d8;
+  color: #d7d7d7;
+  font-weight: 800;
   text-transform: uppercase;
+  font-size: 0.85rem;
   letter-spacing: 1px;
-  transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
 .nav-links a:hover {
   color: #00ff88;
-  text-shadow: 0 0 12px rgba(0, 255, 136, 0.8);
 }
 
-.hero-content,
-.page-title {
-  width: min(1100px, 88%);
-  margin: auto;
-  padding: 80px 0;
+/* HOMEPAGE HERO */
+
+.hero {
+  min-height: 620px;
+  height: 76vh;
+  max-height: 820px;
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.12),
+      rgba(0, 0, 0, 0.70)
+    ),
+    url("hero-background.png");
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
-.hero-content h1,
-.page-title h1 {
-  font-size: clamp(3rem, 9vw, 7rem);
-  line-height: 0.95;
+.hero-content {
+  flex: 1;
+  max-width: 850px;
+  padding: 70px 6% 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: clamp(3rem, 8vw, 7rem);
+  line-height: 0.9;
   text-transform: uppercase;
   letter-spacing: 4px;
   margin-bottom: 24px;
-  text-shadow:
-    0 0 20px rgba(255, 0, 0, 0.45),
-    0 0 35px rgba(0, 255, 136, 0.25);
+  text-shadow: 0 0 24px rgba(0, 0, 0, 0.98);
 }
 
-.tagline,
-.page-title p {
+.tagline {
   max-width: 720px;
-  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
-  color: #d0d0d0;
+  color: #ededed;
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
   margin-bottom: 32px;
+  text-shadow: 0 0 18px rgba(0, 0, 0, 0.98);
 }
+
+/* PAGE HEADERS FOR MUSIC / VIDEOS / STORE */
+
+.page-header {
+  min-height: 420px;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.80)),
+    url("blacksite-background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.page-title {
+  padding: 90px 6%;
+  max-width: 1000px;
+}
+
+.page-title h1 {
+  font-size: clamp(3rem, 8vw, 6rem);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  line-height: 0.95;
+  margin-bottom: 18px;
+}
+
+.page-title p {
+  max-width: 760px;
+  color: #d7d7d7;
+  font-size: 1.15rem;
+}
+
+/* COMMON */
 
 .eyebrow {
   color: #00ff88;
+  font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 3px;
-  font-weight: 800;
   font-size: 0.85rem;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
-
-.hero-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-}
-
-.button {
-  display: inline-block;
-  padding: 13px 22px;
-  background: #b30000;
-  color: #ffffff;
-  border: 1px solid #ff3030;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 800;
-  font-size: 0.9rem;
-  box-shadow: 0 0 18px rgba(255, 0, 0, 0.35);
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-}
-
-.button:hover {
-  background: #e00000;
-  transform: translateY(-2px);
-  box-shadow: 0 0 28px rgba(255, 0, 0, 0.65);
-}
-
-.button.secondary {
-  background: transparent;
-  border-color: #00ff88;
-  box-shadow: 0 0 18px rgba(0, 255, 136, 0.2);
-}
-
-.button.secondary:hover {
-  background: rgba(0, 255, 136, 0.12);
-  box-shadow: 0 0 28px rgba(0, 255, 136, 0.45);
-}
-
-/* MAIN SECTIONS */
 
 .section {
-  padding: 90px 6%;
-  max-width: 1200px;
-  margin: 0 auto;
+  padding: 80px 6%;
+  background: rgba(0, 0, 0, 0.68);
+  border-top: 1px solid rgba(0, 255, 136, 0.12);
 }
 
 .section.dark {
-  max-width: none;
-  background:
-    linear-gradient(90deg, rgba(0, 255, 136, 0.08), transparent),
-    #0b0b0b;
-  border-top: 1px solid rgba(0, 255, 136, 0.18);
-  border-bottom: 1px solid rgba(0, 255, 136, 0.18);
+  background: rgba(0, 0, 0, 0.82);
 }
 
 .section h2 {
   font-size: clamp(2rem, 5vw, 4rem);
   text-transform: uppercase;
   letter-spacing: 3px;
-  margin-bottom: 20px;
+  line-height: 1;
+  margin-bottom: 22px;
 }
 
 .section p {
   max-width: 850px;
-  color: #d3d3d3;
-  font-size: 1.1rem;
+  color: #d5d5d5;
+  font-size: 1.05rem;
   margin-bottom: 22px;
 }
 
-.feature-card {
-  margin-top: 36px;
-  padding: 34px;
-  max-width: 780px;
-  background:
-    linear-gradient(135deg, rgba(255, 0, 0, 0.16), rgba(0, 255, 136, 0.08)),
-    #111111;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.7);
+/* BUTTONS */
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 24px;
 }
 
-.feature-card h3 {
-  font-size: 1.6rem;
+.button {
+  display: inline-block;
+  padding: 13px 22px;
+  background: #00ff88;
+  color: #000000;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px solid #00ff88;
+  box-shadow: 0 0 18px rgba(0, 255, 136, 0.25);
+}
+
+.button:hover {
+  background: #ffffff;
+  border-color: #ffffff;
+}
+
+.button.secondary {
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+}
+
+.button.secondary:hover {
+  color: #000000;
+  background: #ffffff;
+}
+
+/* CARDS */
+
+.feature-card,
+.product-card,
+.video-card {
+  background: rgba(5, 5, 5, 0.88);
+  border: 1px solid rgba(0, 255, 136, 0.18);
+  padding: 28px;
+  box-shadow: 0 0 28px rgba(0, 0, 0, 0.75);
+}
+
+.feature-card h3,
+.product-card h3,
+.video-card h3 {
+  color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 12px;
 }
 
-/* MUSIC PAGE */
+.feature-card p,
+.product-card p,
+.video-card p {
+  color: #cfcfcf;
+}
 
-.music-album-box {
+/* GRIDS */
+
+.store-grid,
+.video-grid {
   display: grid;
-  grid-template-columns: 360px 1fr;
-  gap: 40px;
-  align-items: center;
-}
-
-.music-cover img {
-  width: 100%;
-  max-width: 360px;
-  display: block;
-  border: 1px solid rgba(0, 255, 136, 0.3);
-  box-shadow:
-    0 0 30px rgba(0, 0, 0, 0.85),
-    0 0 30px rgba(0, 255, 136, 0.18);
-}
-
-.music-info h2 {
-  font-size: clamp(2.2rem, 5vw, 4rem);
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  line-height: 1;
-  margin-bottom: 20px;
-}
-
-.music-track-list {
-  max-width: 700px;
-  display: grid;
-  gap: 8px;
-}
-
-.music-track {
-  padding: 12px 16px;
-  background: #090909;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: #f2f2f2;
-  font-weight: 800;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-
-.music-track span {
-  color: #00ff88;
-  margin-right: 14px;
-}
-
-/* STORE / CARDS */
-
-.store-grid {
-  margin-top: 36px;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 24px;
+  margin-top: 32px;
 }
 
-.product-card {
+.product-image,
+.video-thumb {
+  min-height: 150px;
+  margin-bottom: 18px;
   background:
-    linear-gradient(145deg, rgba(255, 0, 0, 0.12), rgba(0, 255, 136, 0.06)),
-    #101010;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  padding: 24px;
-  min-height: 100%;
-  box-shadow: 0 0 24px rgba(0, 0, 0, 0.6);
-}
-
-.product-image {
-  height: 170px;
-  margin-bottom: 20px;
+    radial-gradient(circle at center, rgba(0, 255, 136, 0.20), transparent 45%),
+    linear-gradient(135deg, #090909, #1a0000 65%, #000000);
+  border: 1px solid rgba(0, 255, 136, 0.22);
   display: flex;
   align-items: center;
   justify-content: center;
-  background:
-    radial-gradient(circle, rgba(0, 255, 136, 0.18), transparent 55%),
-    linear-gradient(135deg, #1b1b1b, #080808);
-  border: 1px solid rgba(0, 255, 136, 0.22);
   color: #00ff88;
+  font-size: 2.4rem;
   font-weight: 900;
-  letter-spacing: 3px;
-}
-
-.product-card h3 {
-  font-size: 1.25rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 12px;
-}
-
-.product-card p {
-  font-size: 1rem;
-  margin-bottom: 16px;
-}
-
-.price {
-  color: #00ff88 !important;
-  font-size: 1.5rem !important;
-  font-weight: 900;
-}
-
-/* SOCIAL / FOOTER */
-
-.social-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 25px;
-}
-
-.social-links a {
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  padding: 11px 16px;
-  color: #ffffff;
-  background: #111111;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-weight: 700;
-}
-
-.social-links a:hover {
-  border-color: #00ff88;
-  color: #00ff88;
-}
-
-footer {
-  padding: 28px 6%;
-  background: #020202;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  color: #a8a8a8;
   text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
-/* MOBILE */
-
-@media (max-width: 900px) {
-  .nav {
-    align-items: flex-start;
-    flex-direction: column;
-  }
-
-  .nav-links {
-    justify-content: flex-start;
-  }
-
-  .store-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .music-album-box {
-    grid-template-columns: 1fr;
-  }
-
-  .music-cover img {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 560px) {
-  .store-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .section {
-    padding: 70px 6%;
-  }
-
-  .hero-content,
-  .page-title {
-    width: 90%;
-  }
-
-  .nav-links {
-    gap: 14px;
-  }
-
-  .nav-links a {
-    font-size: 0.8rem;
-  }
-}
+/* AUDIO PLAYERS */
 
 .product-card audio {
   display: block;
@@ -422,13 +296,69 @@ footer {
   overflow: hidden;
 }
 
-body {
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55)),
-    url("blacksite-background.png");
+/* SOCIAL */
 
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.social-links a {
+  padding: 12px 18px;
+  border: 1px solid rgba(0, 255, 136, 0.35);
+  background: rgba(0, 0, 0, 0.75);
+  color: #ffffff;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.social-links a:hover {
+  background: #00ff88;
+  color: #000000;
+}
+
+/* FOOTER */
+
+footer {
+  padding: 28px 6%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.92);
+  border-top: 1px solid rgba(0, 255, 136, 0.18);
+  color: #bdbdbd;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+  .nav {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .nav-links {
+    justify-content: flex-start;
+    gap: 14px;
+  }
+
+  .hero {
+    min-height: 580px;
+    height: auto;
+    max-height: none;
+    background-position: center top;
+  }
+
+  .hero-content {
+    padding: 70px 6% 80px;
+  }
+
+  .hero-content h1 {
+    font-size: clamp(2.7rem, 14vw, 4.5rem);
+  }
+
+  .section {
+    padding: 64px 6%;
+  }
 }
