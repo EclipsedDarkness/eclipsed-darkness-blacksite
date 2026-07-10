@@ -399,3 +399,71 @@ footer {
     padding: 56px 6% 68px;
   }
 }
+
+/* FINAL BACKGROUND FIX */
+
+/* Main site background: about, contact, music, videos, store */
+body {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55)),
+    url("blacksite-background.png") !important;
+
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+}
+
+/* Homepage top header ONLY */
+.hero {
+  min-height: 540px;
+  height: 64vh;
+  max-height: 700px;
+
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.10),
+      rgba(0, 0, 0, 0.70)
+    ),
+    url("hero-background.png") !important;
+
+  background-size: cover !important;
+  background-position: center 42% !important;
+  background-repeat: no-repeat !important;
+
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Force everything below the hero to use the blacksite background */
+main {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.55)),
+    url("blacksite-background.png") !important;
+
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+}
+
+/* Keep sections readable but let blacksite background show through */
+.section {
+  background: rgba(0, 0, 0, 0.62) !important;
+}
+
+.section.dark {
+  background: rgba(0, 0, 0, 0.72) !important;
+}
+
+/* Other pages use blacksite background, not hero image */
+.page-header {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.72)),
+    url("blacksite-background.png") !important;
+
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
